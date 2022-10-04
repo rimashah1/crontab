@@ -7,9 +7,11 @@
 5. select-editor --> 1 for nano
 6. git clone url
 7. cd into folder
-8. crontab -e --> add cron expression 
+8. crontab -e --> add cron expression <br>
     ex. * * * * * usr/bin/python3 pwd path
-9. sudo service cron reload (to restart)
+9. Notes: <br>
+    sudo service cron reload (to restart)
+    systemctl status cron (status)
 
 # Execute file once a day
 23 16 * * * /usr/bin/python3 /home/rima/crontab/crontab.py
