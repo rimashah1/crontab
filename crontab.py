@@ -3,10 +3,6 @@ import sys
 import time
 import requests
 
-import os 
-import sys
-import time
-
 # request data
 df = requests.get('https://covid-api.mmediagroup.fr/v1/cases')
 df = df.json()
@@ -18,7 +14,8 @@ now = time.time()
 nowStr = time.strftime("%Y-%m-%d_%H:%M:%S", time.localtime(now))
 
 # create a new file in the current working directory
-df.to_csv('/home/rima/crontab/Covid' + nowStr + '.csv')
+with open('/home/rima/crontab/Covid' + nowStr + '.txt', 'w') as f:
+    f.write(str(df))
 
 
 
