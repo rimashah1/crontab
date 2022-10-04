@@ -10,7 +10,7 @@
 8. crontab -e --> add cron expression <br>
     ex. * * * * * usr/bin/python3 pwd path
 9. Notes: <br>
-    sudo service cron reload (to restart)
+    sudo service cron reload (to restart) <br>
     systemctl status cron (status)
 
 # Execute file once a day
